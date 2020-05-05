@@ -28,3 +28,78 @@ document.querySelectorAll(".nav-link").forEach((link) => {
     link.style.color = "";
   });
 });
+
+//`dblclick` on main Image
+const changeImage = document.querySelector(".intro img");
+// console.log(changeImage);
+
+changeImage.addEventListener("dblclick", () => {
+  changeImage.src = "img/orange-volkswagen.jpg";
+  changeImage.alt = "A blue die-cast volkswagen";
+});
+
+// `scroll` on h2 tags
+document.addEventListener("scroll", () => {
+  document.querySelectorAll("h2").forEach((item) => {
+    item.style.color = "#4c89bf";
+    item.style.color = "#4c89bf";
+  });
+});
+
+// `resize` on main Image
+window.addEventListener("resize", () => {
+  const cityBus = document.querySelector(".intro img");
+  cityBus.src = "img/volkswagen.jpg";
+});
+
+// `click` on bottom buttons
+const pressBtn = document.querySelectorAll(".btn");
+
+pressBtn.forEach((element) => {
+  element.addEventListener("click", () => {
+    element.textContent = "Book my Ticket!";
+    // element.style.transform = "rotate (360deg)";
+    element.style.transition = "all 1s";
+  });
+});
+
+//  `mouseenter`
+const newPointer = document.querySelectorAll("h4"); //hover image not showing
+
+newPointer.forEach((element) => {
+  element.addEventListener("mouseenter", () => {
+    element.style.cursor = element.style.backgroundColor = "#4c89bf";
+  });
+});
+
+// `mouseleave`
+
+newPointer.forEach((element) => {
+  element.addEventListener("mouseleave", () => {
+    element.style.background = "";
+  });
+});
+
+// Propagation Property
+
+document.querySelectorAll(".destination").forEach((div) => {
+  div.addEventListener("click", () => {
+    div.style.backgroundColor = "steelblue";
+  });
+});
+
+document.querySelectorAll(".btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    console.log("You have clicked a magical button");
+    event.stopPropagation();
+  });
+});
+
+//Stop Navagation
+
+const goNoFurther = document.querySelectorAll(".nav a");
+goNoFurther.forEach((noDuckGo) => {
+  noDuckGo.addEventListener("click", (noDuckGo) => {
+    noDuckGo.preventDefault();
+  });
+});
