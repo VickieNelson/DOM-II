@@ -138,6 +138,44 @@ photo.addEventListener("mousedown", function () {
 var intro = document.querySelector(".intro img");
 intro.addEventListener("dblclick", function () {
   intro.style.display = "none";
+}); // Keyup to change body to orange
+
+var body = document.querySelector("body");
+body.addEventListener("keyup", function () {
+  body.style.background = "orange";
+}); // Mouse over to change text color to crimson
+
+var inverseText = document.querySelector(".inverse-content .text-content");
+inverseText.addEventListener("mouseover", function () {
+  inverseText.style.color = "crimson";
+}); // Mouse move to change text and background color
+
+var destination = document.querySelector(".content-pick");
+destination.addEventListener("mousemove", function () {
+  destination.style.color = "green";
+  destination.style.background = "lightgrey";
+}); // Mouse to change heading to crimson
+
+var destinationText = document.querySelector(".content-destination h2");
+destinationText.addEventListener("mouseout", function () {
+  destinationText.style.color = "crimson";
+}); // Wheel to change header to yellow
+
+var header = document.querySelector("header");
+header.addEventListener("wheel", function () {
+  header.style.background = "yellow";
+}); // Mouse up to highlight nav items green
+
+var nav = document.querySelector(".nav");
+nav.addEventListener("mouseup", function () {
+  nav.style.background = "green";
+});
+var navigation = document.querySelectorAll("a");
+navigation.forEach(function (navigation) {
+  event.preventDefault();
+  navigation.addEventListener("click", function () {
+    navigation.style.color = "purple";
+  });
 });
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];

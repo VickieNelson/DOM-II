@@ -1,25 +1,30 @@
-// Your code goes here
+//  `keydown`on Fun Bus logo
+const newText = document.querySelector(".logo-heading");
 
-// Change the text color to crimson on mouse enter
-const footerText = document.querySelector(".footer p");
-footerText.addEventListener("mouseenter", function () {
-  footerText.style.color = "crimson";
+window.addEventListener("keydown", () => {
+  const newText = document.querySelector(".logo-heading");
+  newText.textContent = "Come Travel Us!";
+  newText.style.color = "#4c89bf";
+  newText.style.fontSize = "5rem";
 });
 
-// Change the color to grey on mouse leave
-const footer = document.querySelector(".footer");
-footer.addEventListener("mouseleave", function () {
-  footer.style.background = "grey";
+//  `keyup`on Fun Bus logo
+window.addEventListener("keyup", () => {
+  newText.textContent = "Fun Bus";
+  newText.style.color = "#212529";
+  newText.style.fontSize = "4rem";
 });
 
-// click mouse down to change width to 200px
-const photo = document.querySelector(".img-content img");
-photo.addEventListener("mousedown", function () {
-  photo.style.width = "200px";
+//  `mouseover` on Navagation
+document.querySelectorAll(".nav a").forEach((element) => {
+  element.addEventListener("mouseover", () => {
+    element.style.color = "#4c89bf";
+  });
 });
 
-// Double clikc to change display to none
-const intro = document.querySelector(".intro img");
-intro.addEventListener("dblclick", function () {
-  intro.style.display = "none";
+//  `mouseout` on Navagation
+document.querySelectorAll(".nav-link").forEach((link) => {
+  link.addEventListener("mouseout", () => {
+    link.style.color = "";
+  });
 });
