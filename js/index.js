@@ -35,7 +35,7 @@ const changeImage = document.querySelector(".intro img");
 
 changeImage.addEventListener("dblclick", () => {
   changeImage.src = "img/orange-volkswagen.jpg";
-  changeImage.alt = "A blue die-cast volkswagen";
+  changeImage.alt = "A blue volkswagen";
 });
 
 // `scroll` on h2 tags
@@ -57,7 +57,7 @@ const pressBtn = document.querySelectorAll(".btn");
 
 pressBtn.forEach((element) => {
   element.addEventListener("click", () => {
-    element.textContent = "Book my Ticket!";
+    element.textContent = "Book my trip!";
     // element.style.transform = "rotate (360deg)";
     element.style.transition = "all 1s";
   });
@@ -90,15 +90,15 @@ document.querySelectorAll(".destination").forEach((div) => {
 
 document.querySelectorAll(".btn").forEach((btn) => {
   btn.addEventListener("click", () => {
-    console.log("You have clicked a magical button");
+    console.log("You have clicked a magic button");
     event.stopPropagation();
   });
 });
 
 //Stop Navagation
 
-const goNoFurther = document.querySelectorAll(".nav a");
-goNoFurther.forEach((noDuckGo) => {
+const noFurther = document.querySelectorAll(".nav a");
+noFurther.forEach((noDuckGo) => {
   noDuckGo.addEventListener("click", (noDuckGo) => {
     noDuckGo.preventDefault();
   });
